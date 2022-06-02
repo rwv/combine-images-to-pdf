@@ -39,5 +39,11 @@ module.exports = {
     filename: "index.js",
     path: path.resolve(__dirname, "lib"),
     chunkFormat: "module",
+    library: {
+      type: "module",
+    },
+  },
+  experiments: {
+    outputModule: true,
   },
 };
