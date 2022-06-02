@@ -24,10 +24,12 @@ module.exports = {
   ],
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
+    alias: {
+			fs: 'pdfkit/js/virtual-fs.js'
+		},
     fallback: {
       assert: require.resolve("assert"),
       events: require.resolve("events"),
-      fs: require.resolve("browserify-fs"),
       path: require.resolve("path-browserify"),
       process: require.resolve('process/browser'),
       stream: require.resolve("stream-browserify"),
