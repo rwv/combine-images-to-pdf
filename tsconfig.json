@@ -8,6 +8,5 @@
     "esModuleInterop": true,
     "moduleResolution": "node",
     "outDir": "lib",
-    "allowJs": true
   }
 }

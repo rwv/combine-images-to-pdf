@@ -8,7 +8,9 @@
   "type": "module",
   "scripts": {
     "prepublish": "npm run build",
-    "build": "webpack --config webpack.config.cjs"
+    "build": "npm run build:script && npm run build:types",
+    "build:script": "webpack --config webpack.config.cjs",
+    "build:types": "tsc --emitDeclarationOnly"
   },
   "repository": {
     "type": "git",
