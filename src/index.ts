@@ -1,4 +1,4 @@
-import PDFDocument from "pdfkit";
+import PDFDocument from "pdfkit/js/pdfkit.esnext.js";
 import blobStream from "blob-stream";
 
 export async function combineImagesToPDF(
@@ -22,6 +22,7 @@ export async function combineImagesToPDF(
     const { blob, width, height } = pageInfo;
     doc.addPage({ size: [width, height] });
     const url = URL.createObjectURL(blob);
+    // @ts-ignore
     doc.image(url, 0, 0, { width, height });
   }
 
